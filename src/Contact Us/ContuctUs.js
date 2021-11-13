@@ -1,27 +1,49 @@
 import React from 'react';
+import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import { Typography } from '@mui/material';
+import Grid from '@mui/material/Grid';
+import TextField from '@mui/material/TextField';
+import { Button, Container } from '@mui/material';
+import contractUs from '../Images/contract.jpg'
+
+
 
 const ContuctUs = () => {
     return (
-      
-        <form  className="mx-auto w-50">
-          <h2 className="text-primary">Your Contact </h2>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label"> Your Name:</label>
-          <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
-          <div id="emailHelp" class="form-text"></div>
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Email Address:</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
-          <div id="emailHelp" class="form-text"></div>
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label"> Your Message:</label>
-          <input type="text" class="form-control" id="exampleInputPassword1"/>
-        </div>
+      <Container>
+        <br /> <br />
+         <Typography variant ='h1' style={{  textAlign: 'center', color: 'black', fontSize:40, fontWeight: 500}}>
+            Contract Us 
+        </Typography>
         
-        <button type="submit" class="btn btn-primary">Send Us</button>
-      </form>
+        <Box sx={{ flexGrow: 1 }}>
+      <Grid container spacing={2}>
+        <Grid item xs={6} md={8}>
+        <img style={{width: 500,}}
+        src={contractUs} alt=""  />
+        </Grid>
+        <Grid item xs={4}>
+        <TextField id="standard-basic" label="Name" variant="standard" />
+        <br />
+        <TextField id="standard-basic" label="Email" variant="standard" />
+        <br />
+        <TextField id="standard-basic" label="Your Masaage" variant="standard" />
+        <br />
+        
+        <br />
+        <Button  variant="contained" style={{ backgroundColor:'#0B37FF '}}>
+          Send
+        </Button>
+        <br /> <br />
+          
+        </Grid>
+     
+      </Grid>
+    </Box>
+      </Container>
+        
+       
     );
 };
 

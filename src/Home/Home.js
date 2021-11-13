@@ -1,6 +1,6 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
-import ContuctUs from '../Contact Us/ContuctUs';
+import ContructUs from '../Contact Us/ContuctUs'
 import Experts from '../Experts/Experts';
 import Footer from '../Footer/Footer';
 import Register from '../Register/Register';
@@ -13,6 +13,7 @@ const Home = () => {
             <Services></Services>
            
             <Experts></Experts>
+            <ContructUs></ContructUs>
             
 
         </div>

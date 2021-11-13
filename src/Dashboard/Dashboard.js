@@ -28,6 +28,9 @@ import MakeAdmin from './Make Admin/MakeAdmin';
 import Payment from './Payment/Payment';
 import ManageServices from '../ManageServices/ManageServices';
 import useAuth from '../hooks/useAuth';
+import Profile from '../Profile/Profile';
+import AddReview from './Add Review/AddReview';
+import Menubar from '../Menubar/Menubar';
 
 const drawerWidth = 240;
 
@@ -47,7 +50,7 @@ function Dashboard(props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   React.useEffect(()=>{
-    fetch('http://localhost:5000/users')
+    fetch('https://pure-escarpment-37215.herokuapp.com/users')
          .then(res=>res.json())
         .then(data=>setAdmin(data));
 
@@ -87,9 +90,12 @@ function Dashboard(props) {
 
 <Box>
 
-<Link to ={`${url}/manageService`}> <Button color ='inherit'> Manage Service</Button> </Link>
+<Link to ={`${url}/profile`}> <Button color ='inherit'> My Order</Button> </Link>
 
 <Link to ={`${url}/payment`}> <Button color ='inherit'> Payment</Button> </Link>
+
+
+<Link to ={`${url}/addreview`}> <Button color ='inherit'> Add Review</Button> </Link>
 
 
 </Box>
@@ -134,6 +140,7 @@ function Dashboard(props) {
           ml: { sm: `${drawerWidth}px` },
         }}
       >
+        <Menubar></Menubar>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -145,7 +152,7 @@ function Dashboard(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Responsive drawer
+            
           </Typography>
         </Toolbar>
       </AppBar>
@@ -193,6 +200,16 @@ function Dashboard(props) {
         
         <Route  path={`${path}/makeAdmin`}>
           <MakeAdmin></MakeAdmin>
+          
+        </Route>
+
+        <Route  path={`${path}/profile`}>
+          <Profile></Profile>
+          
+        </Route>
+
+        <Route  path={`${path}/addreview`}>
+         <AddReview></AddReview>
           
         </Route>
 

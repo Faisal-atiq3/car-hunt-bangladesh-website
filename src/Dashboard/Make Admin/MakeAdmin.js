@@ -10,7 +10,7 @@ const MakeAdmin = () => {
     }
     const handleAdminSubmint= e =>{
        const adminData = {useremail: email}
-        axios.post('http://localhost:5000/users', adminData)
+        axios.post('https://pure-escarpment-37215.herokuapp.com', adminData)
         .then(res=>{
             if (res.data.insertedId){
                 alert('Added Successfully')

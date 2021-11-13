@@ -22,7 +22,7 @@ const Profile = () => {
 
 
     useEffect(()=>{
-      fetch('https://gory-alien-54575.herokuapp.com/AllOrder')
+      fetch('https://pure-escarpment-37215.herokuapp.com/AllOrder')
       .then(res=>res.json())
       .then(data=>setMyOrder(data));
       
@@ -34,7 +34,7 @@ const Profile = () => {
 
 
     const handleDeleteOrder =id=>{
-      const url= `https://gory-alien-54575.herokuapp.com/AllOrder/${id}`;
+      const url= `https://pure-escarpment-37215.herokuapp.com/AllOrder/${id}`;
       fetch(url, {
           method: 'DELETE'
       })

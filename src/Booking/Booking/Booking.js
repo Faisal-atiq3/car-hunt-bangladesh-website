@@ -17,7 +17,7 @@ const Booking = () => {
 
 
     useEffect(()=>{
-        fetch('https://gory-alien-54575.herokuapp.com/services')
+        fetch('https://pure-escarpment-37215.herokuapp.com/services')
         .then(res=>res.json())
         .then(data=>setService(data));
         
@@ -50,7 +50,7 @@ const Booking = () => {
     const onSubmitButton = () => {
       
         console.log(orderData);
-      axios.post('http://localhost:5000/AllOrder',orderData)
+      axios.post('https://pure-escarpment-37215.herokuapp.com',orderData)
       .then(res=> {
           // if (res.data.insertedId){
           //     alert('Added Successfully')

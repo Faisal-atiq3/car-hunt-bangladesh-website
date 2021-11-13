@@ -9,7 +9,7 @@ import { Container } from '@mui/material';
 const Services = () => {
     const [services,setServices]= useState([])
     useEffect(()=>{
-        fetch('https://gory-alien-54575.herokuapp.com/services')
+        fetch('https://pure-escarpment-37215.herokuapp.com/services')
         .then(res=>res.json())
         .then(data=>setServices(data));
     },[])
