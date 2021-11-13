@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="row">
             <div className="col-md-5">
               <div className="left-container text-start">
-                <h1>CRUSH BURGER HOUSE</h1>
+                <h1>CAR HUNT BANGLADESH</h1>
                 <div className="icons-container d-flex text-center ">
                   </div>
                 <p className="mt-2 ">
@@ -24,11 +24,11 @@ const Footer = () => {
                 </p>
                 <p className="mt-1 ">
                   
-                Email : info@curshburgerhouse.com
+                Email : info@carhuntbangladesh.com
                 </p>
 
                 <p className="mt-5">
-                  <small>Copyright © 2021 Crush Burger House Ltd.</small>
+                  <small>Copyright © 2021 Car hunt bangladesh Ltd.</small>
                 </p>
               </div>
             </div>
@@ -63,7 +63,7 @@ const Footer = () => {
                   
                   <div>
                     <p>
-                    CRUSH BURGER HOUSE Specialized is a Centre of excellence where advanced services <br /> are rendered by a group of experienced renowned professors and consultants.
+                    CAR HUNT BANGLADESH Specialized is a Centre of excellence where advanced services <br /> are rendered by a group of experienced renowned professors and consultants.
                     </p>
                   </div>
                 </div>

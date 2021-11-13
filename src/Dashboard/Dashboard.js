@@ -27,6 +27,7 @@ import {
 import MakeAdmin from './Make Admin/MakeAdmin';
 import Payment from './Payment/Payment';
 import ManageServices from '../ManageServices/ManageServices';
+import useAuth from '../hooks/useAuth';
 
 const drawerWidth = 240;
 
@@ -38,46 +39,90 @@ function Dashboard(props) {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
+  const [admin, setAdmin ]= React.useState([]);
+  const {user}= useAuth();
 
-  const drawer = (
-    <div>
-      <Toolbar />
-      <Divider />
-      
-      <Link to ={`${url}/makeAdmin`}> <Button color ='inherit'> Make a Admin</Button> </Link><br />
-
-      <Link to ={`${url}/AddService`}> <Button color ='inherit'> Add Service</Button> </Link>
-
-      <Link to ={`${url}/manageService`}> <Button color ='inherit'> Manage Service</Button> </Link>
-
-      <Link to ={`${url}/payment`}> <Button color ='inherit'> Payment</Button> </Link>
-
-
-      <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-    </div>
-  );
+  
 
   const container = window !== undefined ? () => window().document.body : undefined;
+
+  React.useEffect(()=>{
+    fetch('http://localhost:5000/users')
+         .then(res=>res.json())
+        .then(data=>setAdmin(data));
+
+  },[])
+
+
+
+
+
+
+  
+
+        const exactService =admin.filter(item=> item.useremail===user.email );
+ console.log( exactService)
+
+        const drawer = (
+          <div>
+            <Toolbar />
+            <Divider />
+
+
+
+          {
+            exactService[0]?.useremail?
+
+
+
+<Box>
+              
+<Link to ={`${url}/makeAdmin`}> <Button color ='inherit'> Make a Admin</Button> </Link><br />
+
+<Link to ={`${url}/AddService`}> <Button color ='inherit'> Add Service</Button> </Link>
+</Box>
+
+:
+
+
+<Box>
+
+<Link to ={`${url}/manageService`}> <Button color ='inherit'> Manage Service</Button> </Link>
+
+<Link to ={`${url}/payment`}> <Button color ='inherit'> Payment</Button> </Link>
+
+
+</Box>
+
+
+          }
+      
+            <List>
+              {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+                <ListItem button key={text}>
+                  <ListItemIcon>
+                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  </ListItemIcon>
+                  <ListItemText primary={text} />
+                </ListItem>
+              ))}
+            </List>
+            <Divider />
+            <List>
+              {['All mail', 'Trash', 'Spam'].map((text, index) => (
+                <ListItem button key={text}>
+                  <ListItemIcon>
+                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  </ListItemIcon>
+                  <ListItemText primary={text} />
+                </ListItem>
+              ))}
+            </List>
+          </div>
+        );
+
+
+
 
   return (
     <Box sx={{ display: 'flex' }}>
@@ -146,17 +191,17 @@ function Dashboard(props) {
           <h3>Please select a topic.</h3>
         </Route>
         
-        <Route  path={`${path}/:makeAdmin`}>
+        <Route  path={`${path}/makeAdmin`}>
           <MakeAdmin></MakeAdmin>
           
         </Route>
 
 
-        <Route  path={`${path}/:payment`}>
+        <Route  path={`${path}/payment`}>
           <Payment></Payment>
           
         </Route>
-        <Route  path={`${path}/:manageService`}>
+        <Route  path={`${path}/manageService`}>
           <ManageServices></ManageServices>
           
         </Route>

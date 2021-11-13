@@ -9,7 +9,7 @@ const Register = () => {
     const {signInEmail,updateUser}=useAuth();
     const location = useLocation();
   const history = useHistory();
-  const redirect_uri = location?.state?.from || '/';
+  const redirect_uri = location?.state?.from || '/dashboard';
 
 
 const [errorMessage,setErrorMessage]= useState('');

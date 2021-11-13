@@ -13,7 +13,7 @@ const Login = () => {
   const {signInUsingGoogle,loginUser} =useAuth();
   const location = useLocation();
   const history = useHistory();
-  const redirect_uri = location?.state?.from || '/';
+  const redirect_uri = location?.state?.from || '/dashboard';
 
    const [errorMessage,setErrorMessage] =useState('');
   const [email,setEmail] = useState({});
@@ -30,7 +30,13 @@ const Login = () => {
   const  handlePassword = e=>{
     setPassword(e.target.value);
   }
+    const handlerGoogleLogin = ()=>{
+      signInUsingGoogle()
+      .then(result=>{
+        history.push(redirect_uri);
+    })
 
+    }
 
   const  handleSubmit = ()=>{
     loginUser(email,password)
@@ -67,7 +73,7 @@ const Login = () => {
 <h5 >Dont Have Any Account ? Please <Link to ="/register">Register</Link></h5>
 <br />
     <div>-------------------------------------------------------</div>
-    <button onClick={signInUsingGoogle} className="btn btn-warning"> Google SignIn</button>
+    <button onClick={ handlerGoogleLogin} className="btn btn-warning"> Google SignIn</button>
     <br /> <br /> <br />
 
 </form>

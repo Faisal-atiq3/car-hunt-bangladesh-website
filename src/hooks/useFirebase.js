@@ -7,16 +7,20 @@ const useFirebase=()=>{
     const[isLoading, setisLoading]= useState(true);
     const auth = getAuth();
     const [name,setName]=useState('');
+
     const signInUsingGoogle =() =>{
         setisLoading(true);
         const googleProvider = new GoogleAuthProvider();
-        signInWithPopup(auth,googleProvider)
+        return signInWithPopup(auth,googleProvider)
         .then(result=>{
             setUser(result.user)
         })
         .finally(()=>setisLoading(false));
 
     }
+
+    
+
 
     
 
@@ -62,6 +66,19 @@ const loginUser =(email, password)=>{
             // An error occurred
             // ...
           });
+
+    }
+
+    const saveUser =(email, displayName) =>{
+        const user = {email, displayName};
+        fetch('http://localhost:5000/users', {
+            method: 'POST',
+            headers: {
+                'content-type' : 'application/json'
+            },
+            body:JSON.stringify(user)
+        })
+        .then()
 
     }
 

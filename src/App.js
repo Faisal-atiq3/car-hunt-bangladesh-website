@@ -65,7 +65,7 @@ function App() {
               <Dashboard></Dashboard>
               </PrivateRoute>
 
-              <PrivateRoute exact path="/addService">
+              <PrivateRoute  path="/addService">
               <AddService></AddService>
               </PrivateRoute>
 
