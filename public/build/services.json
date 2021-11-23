@@ -1,0 +1,58 @@
+[
+    {
+        "id":"1",
+        "img":"https://mlzz8m76fr1g.i.optimole.com/6pSmeZY-oqkqMztR/w:960/h:640/q:75/https://hellodhaka.com.bd/wp-content/uploads/2019/04/56775782_2243004516016094_135553815016374272_n.jpg",
+        "name":"Basmati Kacchi",
+        "description": "This food gift package is suitable for 3 people, and delivery in Dhaka is available for Lunch (1pm-4pm) or Dinner (5pm-9pm) time. If you need this gift package for more than 3 people, please select the number of people before adding this product.",
+        "price": "320" ,
+        "details":"Patients are entitled to the full range of human rights. Health care providers must respect each patient’s dignity and autonomy, right to participate in making health care decisions, right to informed consent, right to refuse medical treatment, and right to confidentiality and privacy. The attention, treatment, and care that each health care provider gives to a patient must respect the human rights of every one of his or her patients."
+         
+
+    },
+    {
+        "id":"2",
+        "img":"https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8YnVyZ2VyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80",
+        "name":"Beef Burger",
+        "description": "Dhanmondi is the place to go in Dhaka to enjoy the best quality street food in Dhaka and 'HERFY' is the king of burger. Order online and surprise your loved-one with their mouth-watering beef",
+        "price": "220" ,
+        "details": "Hospital services make up the core of a hospital's offerings. They are often shaped by the needs or wishes of its major users to make the hospital a one-stop or core institution of its local commun ity or medical network. Hospitals are institutions comprising basic services and personnel—usually departments of medicine and surgery—that administer clinical and other services for specific diseases and conditions, as well as emergency services. Hospital services cover a range of medical offerings from basic health care necessities or training and research for major medical school centers to services designed by an industry-owned network of such institutions as health maintenance organizations (HMOs). The mix of services that a hospital may offer depends almost entirely upon its basic mission(s) or objective(s)."
+        
+
+    },
+    {
+        "id":"3",
+        "img":"https://i.pinimg.com/originals/75/81/1f/75811f63640fbcbc61e81eb5b062b65f.jpg",
+        "name":"Chicken Nuggets",
+        "description": "Famous Herfy chicken bucket with: 12 pcs Fried/Broast chicken 1lt Coke Fried/Broast is crisp on the outside, soft and juicy on the inside, spicy marinated chicken with a crunchy",
+        "price": "150" ,
+        "details":"Over the past two decades, hospital services in the United States have declined markedly as a percentage of health care costs, from 43.5% in 1980 to 32.8% in 2000. This decline was due to shortened lengths of hospital stay, the move from inpatient to outpatient facilities for surgery, and a wave of hospital mergers in the 1990s that consolidated services and staff. Since 2001, however, spending on hospital care in the United States has been growing faster than other sectors of the economy as a result of increasing demand for hospital services. Forty percent of the rise in spending on hospital care is due to escalating costs for hospital services attributed to population growth, the aging of the general population, and growing discontent with the limitations imposed by managed care. In addition, new medical technologies have allowed hospitals to provide life-saving diagnostic and therapeutic alternatives that were unavailable in the 1990s."
+    },
+    {
+        "id":"4",
+        "img":"https://i.ytimg.com/vi/7tdUCk9pLPw/maxresdefault.jpg",
+        "name":"Momo",
+        "description": "Mix together the flour and 1 1/2 cups room temperature water in a bowl. Knead the dough well until it is medium-firm and flexible. Cover and let rest for 1 hour.",
+        "price": "180" ,
+        "details": "Most hospitals have extensive surgical services that include preoperative testing, which may include x-rays, CT scans , ultrasonography, blood tests, urinalysis , and/or an EKG. Medication counseling is offered for current patient prescriptions and how they should be taken during and after surgery. Informed consent forms are made available to patients, as well as patient advocate services for questions and assistance in understanding the consent form and similar documents. An anesthesiologist or an assistant discuss with the patient the patient's history of allergies, previous reactions to anesthesia and special precautions that will be taken. Intravenous medications are usually begun in the patient's room before surgery to relax the patient, with general anesthesia administered in the operating room ."
+
+    },
+    {
+        "id":"5",
+        "img":"https://novenfoods.com/wp-content/uploads/2017/06/Chicken-Sandwich.jpg",
+        "name":"Chiken Sandwich ",
+        "description": "Chicken Sandwich is a classical dessert which is made with carrot and milk. This carrot sandwich sweet is made with high quality and fine ingredient by Bonoful. Sweets are fresly made every day. Order",
+        "price": "150" ,
+        "details": "Cardiac Eval provides cardiac testing procedures requested by physicians. Tests include electrocardiograms (EKGs), stress tests, cardiolite (to evaluate adequacy of blood flow to the heart), persantine (to expand arteries in those unable to tolerate vigorous exercise) and Retrospective EKG Memory Loop Recordings to capture data of any arrhythmias causing patient symptoms. These tests are the same as those you would receive at a much larger hospital."
+
+    },
+    {
+        "id":"6",
+        "img":"https://i.ytimg.com/vi/LrKhcvZYFdQ/maxresdefault.jpg",
+        "name":"Vagetables Soup",
+        "description": "All we need to cheer up the afternoon is Unilever’s snack basket; comes with a UpoharBD gift mug for your hot drinks. Maggi noodles  8 packs Knorr Classic Thai Soup 12 packs TAAZA.",
+        "price": "140" ,
+        "details": "Access to health care may vary across countries, communities, and individuals, influenced by social and economic conditions as well as health policies. Providing health care services means the timely use of personal health services to achieve the best possible health outcomes.[2] Factors to consider in terms of healthcare access include financial limitations (such as insurance coverage), geographic barriers (such as additional transportation costs, the possibility to take paid time off of work to use such services)"
+
+
+    }
+]

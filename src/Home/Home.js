@@ -4,6 +4,7 @@ import ContructUs from '../Contact Us/ContuctUs'
 import Experts from '../Experts/Experts';
 import Footer from '../Footer/Footer';
 import Register from '../Register/Register';
+import Review from '../Review/Review';
 import Services from '../Service/Services';
 
 const Home = () => {
@@ -11,8 +12,8 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <Services></Services>
-           
-            <Experts></Experts>
+           <Review></Review>
+            {/* <Experts></Experts> */}
             <ContructUs></ContructUs>
             
 

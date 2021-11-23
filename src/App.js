@@ -19,6 +19,7 @@ import Profile from './Profile/Profile';
 import AddService from './AddService/AddService';
 import ManageServices from './ManageServices/ManageServices';
 import Dashboard from './Dashboard/Dashboard';
+import AllCustomerOrder from './AllCustomerOder/AllCustomerOrder'
 
 
 
@@ -47,6 +48,11 @@ function App() {
 
             <Route path="/about">
              <About></About>
+              </Route>
+
+
+            <Route path="/allcutomerorder">
+             <AllCustomerOrder></AllCustomerOrder>
               </Route>
             
             <Route path="/career">

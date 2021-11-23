@@ -31,6 +31,8 @@ import useAuth from '../hooks/useAuth';
 import Profile from '../Profile/Profile';
 import AddReview from './Add Review/AddReview';
 import Menubar from '../Menubar/Menubar';
+import AddService from '../AddService/AddService';
+import ManageOrder from './ManageOrder/ManageOrder';
 
 const drawerWidth = 240;
 
@@ -43,7 +45,7 @@ function Dashboard(props) {
     setMobileOpen(!mobileOpen);
   };
   const [admin, setAdmin ]= React.useState([]);
-  const {user}= useAuth();
+  const {user ,logOut }= useAuth();
 
   
 
@@ -77,25 +79,80 @@ function Dashboard(props) {
             exactService[0]?.useremail?
 
 
-
+///..........................Admin ........................
 <Box>
               
-<Link to ={`${url}/makeAdmin`}> <Button color ='inherit'> Make a Admin</Button> </Link><br />
+<Button variant="contained" style={{ backgroundColor:'#000000' ,width:'100px',height:'50px', color:'white'}}>
+<Link to ={`${url}/makeAdmin`}> <Button color ='inherit'> Make a Admin</Button> </Link>
+</Button>
+<br /> <br />
 
-<Link to ={`${url}/AddService`}> <Button color ='inherit'> Add Service</Button> </Link>
+
+
+<Button variant="contained" style={{ backgroundColor:'#000000' ,width:'100px',height:'50px', color:'white'}}>
+<Link to ={`${url}/addService`}> <Button color ='inherit'> Add Service</Button> </Link>
+</Button>
+<br />  <br />
+
+
+
+<Button variant="contained" style={{ backgroundColor:'#000000' ,width:'100px',height:'50px', color:'white'}}>
+<Link to ={`${url}/manageService`}> <Button color ='inherit'> Manage Service</Button> </Link>
+</Button>
+
+<br />
+<br />
+
+<Button variant="contained" style={{ backgroundColor:'#000000' ,width:'100px',height:'50px', color:'white'}}>
+<Link to ={`${url}/manageOrder`}> <Button color ='inherit'> Manage Order</Button> </Link>
+</Button>
+
+<br />
+<br />
+
+<Button  variant="contained" style={{ backgroundColor:'#000000' ,width:'100px'}}>
+<Link to ={`${url}/logout`}> <Button onClick={logOut}  color='inherit'> Log Out</Button> </Link>
+</Button>
+
+
+
+
 </Box>
+
+
+
 
 :
 
+//...................Normal User..........................
 
 <Box>
 
+<Button variant="contained" style={{ backgroundColor:'#000000' ,width:'100px',height:'50px', color:'white'}}>
 <Link to ={`${url}/profile`}> <Button color ='inherit'> My Order</Button> </Link>
+</Button>
 
+<br />
+<br />
+
+<Button variant="contained" style={{ backgroundColor:'#000000' ,width:'100px',height:'50px', color:'white'}}>
 <Link to ={`${url}/payment`}> <Button color ='inherit'> Payment</Button> </Link>
+</Button>
+
+<br />
+<br />
 
 
-<Link to ={`${url}/addreview`}> <Button color ='inherit'> Add Review</Button> </Link>
+<Button  variant="contained" style={{ backgroundColor:'#000000' ,width:'100px',height:'50px', color:'white'}}>
+  <Link to ={`${url}/addreview`}> <Button color ='inherit'> Add Review</Button> </Link>
+</Button>
+
+<br />
+<br />
+
+<Button  variant="contained" style={{ backgroundColor:'#000000' ,width:'100px'}}>
+<Link to ={`${url}/addreview`}> <Button onClick={logOut} color ='inherit'> Log Out</Button> </Link>
+</Button>
 
 
 </Box>
@@ -104,7 +161,7 @@ function Dashboard(props) {
           }
       
             <List>
-              {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+              {[].map((text, index) => (
                 <ListItem button key={text}>
                   <ListItemIcon>
                     {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
@@ -115,7 +172,7 @@ function Dashboard(props) {
             </List>
             <Divider />
             <List>
-              {['All mail', 'Trash', 'Spam'].map((text, index) => (
+              {[].map((text, index) => (
                 <ListItem button key={text}>
                   <ListItemIcon>
                     {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
@@ -141,20 +198,7 @@ function Dashboard(props) {
         }}
       >
         <Menubar></Menubar>
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            
-          </Typography>
-        </Toolbar>
+       
       </AppBar>
       <Box
         component="nav"
@@ -213,15 +257,36 @@ function Dashboard(props) {
           
         </Route>
 
+        <Route  path={`${path}/manageOrder`}>
+         <ManageOrder></ManageOrder>
+          
+        </Route>
+
+
+        <Route  path={`${path}/addService`}>
+         <AddService></AddService>
+          
+        </Route>
+
 
         <Route  path={`${path}/payment`}>
           <Payment></Payment>
           
         </Route>
+
+
         <Route  path={`${path}/manageService`}>
           <ManageServices></ManageServices>
           
         </Route>
+
+
+       
+
+
+
+
+        
       </Switch>
         
       </Box>

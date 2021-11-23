@@ -35,7 +35,7 @@ const Footer = () => {
             <div className="col-md-2">
               <div className="footer-menu-container">
                 <ul>
-                  <li className="footer-menu">Home</li>
+                  <h1><li className="footer-menu">Home</li></h1>
                   <li className="footer-menu">Services</li>
                   
                   <li className="footer-menu">Contact us</li>
@@ -43,7 +43,19 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="col-md-5">
+            <div className="col-md-2">
+              <div className="footer-menu-container">
+                
+                <ul>
+                  <li className="footer-menu">Products</li>
+                  <li className="footer-menu">Media</li>
+                  
+                  <li className="footer-menu">Online Shop</li>
+                  <li className="footer-menu"> Cutomer Care</li>
+                </ul>
+              </div>
+            </div>
+            <div className="col-md-2">
               <div className="right-footer-container">
                 <h3>Contuct US</h3>
                 <input

@@ -29,8 +29,10 @@ const Banner = () => {
         </Typography>
         <Typography variant ='h6' style={{color: 'red', fontWeight: 400}}>
             We'll help you drive in style
+          
         </Typography>
-        <Button variant="contained" style={{backgroundColor:'#8E44AD'}}>
+        <br />
+        <Button variant="contained" style={{backgroundColor:'#BDC3C7 '}}>
           Learn More
         </Button>
        </Box>

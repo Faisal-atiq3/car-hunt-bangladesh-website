@@ -8,6 +8,12 @@ import { Container } from '@mui/material';
 
 const Services = () => {
     const [services,setServices]= useState([])
+
+      const  [someservice]=[services.slice(0,6)]
+      console.log(someservice)
+
+
+
     useEffect(()=>{
         fetch('https://pure-escarpment-37215.herokuapp.com/services')
         .then(res=>res.json())
@@ -25,7 +31,7 @@ const Services = () => {
            <Box sx={{ flexGrow: 1 }}>
      <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
      {
-    services.map(service => <Service
+    someservice.map(service => <Service
     key={service.id}
     service={service}
     ></Service>)

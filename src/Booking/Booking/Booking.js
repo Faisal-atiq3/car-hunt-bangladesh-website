@@ -50,7 +50,7 @@ const Booking = () => {
     const onSubmitButton = () => {
       
         console.log(orderData);
-      axios.post('https://pure-escarpment-37215.herokuapp.com',orderData)
+      axios.post('https://pure-escarpment-37215.herokuapp.com/AllOrder',orderData)
       .then(res=> {
           // if (res.data.insertedId){
           //     alert('Added Successfully')

@@ -1,17 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React,  { useEffect, useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
 
-const ManageServices = () => {
+const ManageOrder = () => {
+
     const [services, setServices]= useState([])
     useEffect( ()=>{
-        fetch('https://pure-escarpment-37215.herokuapp.com/services')
+        fetch('https://pure-escarpment-37215.herokuapp.com/AllOrder')
         .then(res=>res.json())
         .then(data =>setServices(data))
 
     },[])
 
     const handleDelete =id=>{
-        const url= `https://pure-escarpment-37215.herokuapp.com/services/${id}`;
+        const url= `https://pure-escarpment-37215.herokuapp.com/AllOrder/${id}`;
         fetch(url, {
             method: 'DELETE'
         })
@@ -26,9 +27,15 @@ const ManageServices = () => {
             
         })
     }
+
+
+
+
+
+
     return (
         <div>
-            <h2>Manage Service</h2>
+            <h2>Manage All Order</h2>
             {
                 services.map(service => (
                     <Card style={{ width: '18rem' }}>
@@ -53,4 +60,4 @@ const ManageServices = () => {
     );
 };
 
-export default ManageServices;
+export default ManageOrder;

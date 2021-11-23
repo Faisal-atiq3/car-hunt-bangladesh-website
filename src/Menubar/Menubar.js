@@ -14,18 +14,18 @@ const Menubar = () => {
     <Navbar.Toggle />
     <Navbar.Collapse className="justify-content-end">
     <Nav.Link as={HashLink} to="/home#home">Home</Nav.Link>
-    {/* <Nav.Link as={Link} to="/about">About</Nav.Link> */}
+    <Nav.Link as={Link} to="/about">About</Nav.Link>
     
-      <Nav.Link  as={HashLink} to="/home#services">Services</Nav.Link>
+      <Nav.Link  as={HashLink} to="/allcutomerorder">Explore</Nav.Link>
       {/* <Nav.Link as={Link} to="/contuctUs">Contuct Us</Nav.Link> */}
-      {
+      {/* {
         user?.email &&
         <Nav.Link as={Link} to="/addService">Add a Service</Nav.Link>
-      }
-      {
+      } */}
+      {/* {
         user?.email &&
         <Nav.Link as={Link} to="/manageService">Manage Service</Nav.Link>
-      }
+      } */}
       {
         user?.email &&
         <Nav.Link as={Link} to="/dashboard">DashBoard</Nav.Link>
